@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Database Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- jquery link -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="./assets/js/logic.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--Jumbotron-->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="jumbotron text-center">
+                    <h1>Employee Database Management</h1>
+                    <h2>A comprehensive directory of employee billable hours.</h2>
+                </div>
+            </div>
+        </div>
+        <!--table-->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Current Employee Database</div>
+                    <div class="panel-body">
+                        <!-- Table -->
+                        <table class="table" id="form-table">
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Role</th>
+                                <th>Start Date</th>
+                                <th>Months Worked</th>
+                                <th>Monthly Rate</th>
+                                <th>Total Billed</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Submit form-->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add new employee</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name-input">Name:</label>
+                                <input class="form-control" id="name-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="email-input">Role:</label>
+                                <input class="form-control" id="role-input" type="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="age-input">Pay Rate:</label>
+                                <input class="form-control" id="pay-input" type="number">
+                            </div>
+                            <button class="btn btn-default" id="submit-user" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

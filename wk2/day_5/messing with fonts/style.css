@@ -1,0 +1,23 @@
+p {
+	font-family: 'Libre Barcode 39 Text', cursive;
+}
+
+.class1 {
+	font-weight: bold;
+}
+
+.class2 {
+	font-size: 24px;
+}
+
+.class3 {
+	line-height: 50px;
+}
+
+.blink_me {
+	animation: blinker .5s linear infinite;
+}
+
+@keyframes blinker {
+	50% {opacity: 0;}
+}

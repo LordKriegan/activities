@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	var likesSteak = confirm("Do you like steak?");
+    	var userAge = prompt("What year were you born?");
+    	var currentYear = (new Date()).getFullYear();
+    	if (likesSteak) {
+    		document.write("<p>Have a steak sammich!</p>");
+    	}
+    	else {
+    		document.write("<p>Have a tofu stir-fry!</p><p>You weirdo....</p>");
+    	}
+    	if ((currentYear - Number(userAge)) >= 21) {
+    		document.write("<p>Wash it down with some sake!</p>");
+    	}
+    	else {
+    		document.write("<p>No sake for you!</p><p>Maybe next year.</p>")
+    	}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "sample_node",
+  "version": "1.0.0",
+  "description": "my first npm project",
+  "main": "index.js",
+  "scripts": {
+    "test": "blah"
+  },
+  "author": "",
+  "license": "ISC"
+}

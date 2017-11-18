@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock, Paper, Scissors</title>
+</head>
+<body>
+	<div id="head">
+		Press r, p, or s, to start playing!
+	</div>
+	<script type="text/javascript">
+		var compChoices = ["r", "p", "s"];
+		var wins = 0;
+		var losses = 0;
+		var ties = 0;
+		elem = document.getElementById("head");
+		elem.setAttribute('style', 'white-space: pre;');
+		document.onkeyup = function(event) {
+			var userChoice = event.key.toLowerCase();
+			if ((userChoice !== "r") && (userChoice !== "p") && (userChoice !== "s")) {
+				alert(event.key + " is not valid!!!!");
+				return;
+			}
+		 	var compChoice = compChoices[Math.floor(Math.random() * compChoices.length)];
+		 	elem.textContent = "User's Choice: " + userChoice + "\r\nComputer's choice: " + compChoice + "\r\n";
+		 	if (userChoice === compChoice) {
+		 		ties++;
+		 	}
+		 	else if ((userChoice === "r") && (compChoice == "p")) {
+		 		losses++;
+		 	}
+		 	else if ((userChoice === "r") && (compChoice == "s")) {
+		 		wins++;
+		 	}
+		 	else if ((userChoice === "p") && (compChoice == "s")) {
+		 		losses++;
+		 	}
+		 	else if ((userChoice === "p") && (compChoice == "r")) {
+		 		wins++;
+		 	}
+		 	else if ((userChoice === "s") && (compChoice == "r")) {
+		 		losses++;
+		 	}
+		 	else if ((userChoice === "s") && (compChoice == "p")) {
+		 		wins++;
+		 	}
+		 	elem.textContent += "Results: \r\nWins: " + wins + "\r\nLosses " + losses + "\r\nTies " + ties;
+		};
+	</script>
+</body>
+</html>

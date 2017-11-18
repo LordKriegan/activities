@@ -1,0 +1,6 @@
+1. Loop through array of 51 cards and sort into 2 new arrays: arrayRed, and arrayBlack.
+2. Check the length of each array, whichever is smaller is the one missing a card.
+3a. if it is arrayRed, loop through it and sort into 2 new arrays of arrayHearts and arrayDiamonds.
+3b. else if it is arrayBlack, loop through it and sort into 2 new arrays of arrayClubs and arraySpades.
+4. check the lengths of the 2 newest arrays (suits) and whichever is smaller is the one missing a card.
+5. loop through array<suitwithmissingcard>, if i = 0, loop until you find ace, move to next iteration, if i = 1, loop until you find 2, move to next iteration and so on and so forth until you are unable to find your card.

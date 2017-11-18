@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+</head>
+
+<body>
+    <p>Press S to see car stats, D to d drive to work, W to drive around the world, T for a tuneup, and H to honk!</p>
+    <script>
+    var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        driveToWork: function() {
+
+            alert("Old Mileage: " + this.mileage);
+
+            this.mileage = this.mileage + 8;
+
+            alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+            alert("Old Mileage: " + this.mileage);
+
+            this.mileage = this.mileage + 24000;
+
+            alert("New Mileage: " + this.mileage);
+            alert("Car needs a tuneup!");
+
+            this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+            alert("Car is ready to go!");
+            this.isWorking = true;
+        },
+
+        honk: function() {
+            alert("Honk! Honk!");
+        }
+    };
+
+    function reWriteStats() {
+        console.log("Make: " + car.make +
+            "\nModel: " + car.model +
+            "\nColor: " + car.color +
+            "\nMileage: " + car.mileage +
+            "\nWorking: " + car.isWorking);
+    }
+    document.onkeyup = function(event) {
+        var userInput = event.key.toLowerCase();
+        if (userInput === "d") {
+            if (car.isWorking === false) {
+                alert("Car isn't working! Get a tuneup!");
+            } else {
+                car.driveToWork();
+                reWriteStats();
+            }
+        } else if (userInput === "w") {
+            if (car.isWorking === false) {
+                alert("Car isn't working! Get a tuneup!");
+            } else {
+                car.driveAroundWorld();
+                reWriteStats();
+            }
+        } else if (userInput === "t") {
+            car.getTuneUp();
+            reWriteStats();
+        } else if (userInput === "h") {
+            car.honk();
+            reWriteStats();
+        } else {
+            alert("Invalid key!");
+        }
+    }
+    </script>
+</body>
+
+</html>

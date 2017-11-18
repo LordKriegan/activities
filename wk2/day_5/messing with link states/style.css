@@ -1,0 +1,28 @@
+a {
+	display: block;
+}
+
+.Link {
+	background: gray;
+	color: red;
+}
+
+#Link1:default {
+	background: black;
+	color: white;
+}
+
+#Link2:active {
+	background: black;
+	color: white;
+}
+
+#Link3:hover {
+	background: red;
+	color: green;
+}
+
+#Link4:focus {
+	background: red;
+	color: gray;
+}
